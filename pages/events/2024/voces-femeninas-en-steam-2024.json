@@ -14,7 +14,7 @@
       {
         "name": "Sofía Juarez Moran",
         "title": "Parte de la Primera Tripulación de niñas Ecuatorianas que fueron a la Nasa del proyecto 'Ella es Astronauta'",
-        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sofia-Juarez-Moran.webp",
         "socials": [
           {
             "icon": "instagram",
@@ -25,7 +25,7 @@
       {
         "name": "Mazzarello Gaming",
         "title": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello",
-        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mazzarello-Gaming.webp",
         "socials": [
           {
             "icon": "instagram",
@@ -36,7 +36,7 @@
       {
         "name": "Sara Gallegos",
         "title": "Licenciada en Física y Divulgadora de contenido de científico como Morra Científica",
-        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sara-Gallegos.webp",
         "socials": [
           {
             "icon": "instagram",
@@ -51,7 +51,7 @@
       {
         "name": "Jazmín Guayco",
         "title": "Licenciada en Biotecnología Vegetal y Cultivos",
-        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Jazmin-Guayco.webp",
         "socials": [
           {
             "icon": "linkedin",
@@ -62,7 +62,7 @@
       {
         "name": "Cristina Ocaña Gallegos",
         "title": "Licenciada en Biotecnología Vegetal y Cultivos",
-        "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Cristina-Oca%C3%B1a-Gallegos.webp",
         "socials": [
           {
             "icon": "instagram",
@@ -80,25 +80,11 @@
     "title": "Sponsors",
     "description": "Agradecemos a nuestros valiosos patrocinadores por su apoyo.",
     "brands": {
-      "juniors": [
-        {
-          "logo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "name": "Centro de Estudios de Cine y Televisión",
-          "link": ""
-        }
-      ],
-      "mid": [
-        {
-          "logo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "name": "Centro de Estudios de Cine y Televisión",
-          "href": ""
-        }
-      ],
       "senior": [
         {
-          "logo": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/CECTV.webp",
           "name": "Centro de Estudios de Cine y Televisión",
-          "href": ""
+          "href": "https://www.instagram.com/cectvcine/"
         }
       ]
     }
@@ -115,7 +101,7 @@
         "speaker": {
           "name": "Sofía Grijalva",
           "title": "Programadora Frontend y Creadora de Contenido ",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Condor-Coders-Foto-Perfil.webp"
         }
       },
       {
@@ -125,7 +111,7 @@
         "description": "Conoce la experiencia de ir a la NASA como parte de la Primera Tripulación de niñas ecuatorianas que tuvieron la oportunidad de visitar la NASA, gracias al proyecto 'Ella es Astronauta' de la Fundación 'She Is'.",
         "speaker": {
           "name": "Sofía Juarez Moran",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sofia-Juarez-Moran.webp"
         }
       },
       {
@@ -135,7 +121,7 @@
         "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
         "speaker": {
           "name": "Mazzarello Gaming",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mazzarello-Gaming.webp"
         }
       },
       {
@@ -152,7 +138,7 @@
         "speaker": {
           "name": "Sara Gallegos",
           "title": "Licenciada en Física y Divulgadora de contenido de científico como Morra Científica",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sara-Gallegos.webp"
         }
       },
       {
@@ -163,7 +149,7 @@
         "speaker": {
           "name": "Jazmín Guayco",
           "title": "Candidata a PhD en el Centro de Investigación Torácica de la Universidad the Queensland (UQTRC)",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Jazmin-Guayco.webp"
         }
       },
       {
@@ -174,7 +160,7 @@
         "speaker": {
           "name": "Cristina Ocaña Gallegos",
           "title": "Licenciada en Biotecnología Vegetal y Cultivos.",
-          "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Cristina-Oca%C3%B1a-Gallegos.webp"
         }
       },
       {
