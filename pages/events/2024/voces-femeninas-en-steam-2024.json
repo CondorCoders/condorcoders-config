@@ -95,8 +95,8 @@
     "description": "Desde charlas hasta sorteos, no te pierdas de esta jornada ofrece una experiencia enriquecedora para todos los participantes.",
     "itinerary": [
       {
-        "start": 1707580800000,
-        "end": 1707581400000,
+        "start": "Saturday, February 10, 2024 4:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:10:00 PM GMT-5:00",
         "heading": "Bienvenida",
         "description": "Hablamos de la jornada de hoy y cómo participar en los sorteos.",
         "speaker": {
@@ -106,8 +106,8 @@
         }
       },
       {
-        "start": 1707581400000,
-        "end": 1707582600000,
+        "start": "Saturday, February 10, 2024 4:10:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:30:00 PM GMT-5:00",
         "heading": "Mi experiencia en la NASA",
         "description": "Conoce la experiencia de ir a la NASA como parte de la Primera Tripulación de niñas ecuatorianas que tuvieron la oportunidad de visitar la NASA, gracias al proyecto 'Ella es Astronauta' de la Fundación 'She Is'.",
         "speaker": {
@@ -116,8 +116,8 @@
         }
       },
       {
-        "start": 1707582600000,
-        "end": 1707583800000,
+        "start": "Saturday, February 10, 2024 4:30:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:50:00 PM GMT-5:00",
         "heading": "Mazzarello Gaming",
         "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
         "speaker": {
@@ -126,14 +126,14 @@
         }
       },
       {
-        "start": 1707583800000,
-        "end": 1707584400000,
+        "start": "Saturday, February 10, 2024 4:50:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:00:00 PM GMT-5:00",
         "heading": "Sorteo",
         "description": "1x curso de Udemy."
       },
       {
-        "start": 1707584400000,
-        "end": 1707585600000,
+        "start": "Saturday, February 10, 2024 5:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:20:00 PM GMT-5:00",
         "heading": "Mi experiencia estudiando Física",
         "description": "Sara compartirá cómo logró compaginar su dedicación al estudio de la Física con la emocionante labor de crear y divulgar contenido científico en las redes sociales.",
         "speaker": {
@@ -143,8 +143,8 @@
         }
       },
       {
-        "start": 1707585600000,
-        "end": 1707586800000,
+        "start": "Saturday, February 10, 2024 5:20:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
         "heading": "Mi trayectoria hacia la investigación clínica",
         "description": "Desde sus primeros días de formación hasta su actual búsqueda de un doctorado, Jazmín Guayco compartirá sus experiencias, desafíos superados y lecciones aprendidas en el campo de la investigación médica.",
         "speaker": {
@@ -154,8 +154,8 @@
         }
       },
       {
-        "start": 1707586800000,
-        "end": 1707588000000,
+        "start": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
         "heading": "Experiencias personales en la carrera de biotecnología vegetal",
         "description": "En esta charla, Cristina compartirá las vivencias que la llevaron a sumergirse en campo de la biotecnología vegetal. Descubrirás los desafíos superados, los logros alcanzados y las lecciones valiosas aprendidas a lo largo de su trayectoria",
         "speaker": {
@@ -165,8 +165,8 @@
         }
       },
       {
-        "start": 1707588000000,
-        "end": 1707588600000,
+        "start": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
         "heading": "Sorteo",
         "description": "1x curso de Udemy."
       }
