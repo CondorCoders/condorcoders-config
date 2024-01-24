@@ -88,11 +88,10 @@
           "href": "https://www.instagram.com/cectvcine/"
         }
       ],
-      "junior": [
+      "juniors": [
         {
           "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Embajada-Rusa.webp",
           "name": "Embajada de Rusia en Ecuador"
-
         }
       ]
     }
