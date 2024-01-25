@@ -74,6 +74,17 @@
             "href": "https://www.linkedin.com/in/crisdom96"
           }
         ]
+      },
+      {
+        "name": "Ruth Cruz Mendoza",
+        "title": "Artista Plástica",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Ruth-Cruz-Mendoza.webp",
+        "socials": [
+          {
+            "icon": "instagram",
+            "href": "https://www.instagram.com/ruthcruzmendoza/"
+          }
+        ]
       }
     ]
   },
@@ -125,11 +136,12 @@
       {
         "start": "Saturday, February 10, 2024 4:30:00 PM GMT-5:00",
         "end": "Saturday, February 10, 2024 4:50:00 PM GMT-5:00",
-        "heading": "Mazzarello Gaming",
-        "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
+        "heading": "Mi trayectoria hacia la investigación clínica",
+        "description": "Desde sus primeros días de formación hasta su actual búsqueda de un doctorado, Jazmín Guayco compartirá sus experiencias, desafíos superados y lecciones aprendidas en el campo de la investigación médica.",
         "speaker": {
-          "name": "Mazzarello Gaming",
-          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mazzarello-Gaming.webp"
+          "name": "Jazmín Guayco Sigcha",
+          "title": "Candidata a PhD en el Centro de Investigación Torácica de la Universidad the Queensland (UQTRC)",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Jazmin-Guayco.webp"
         }
       },
       {
@@ -152,17 +164,6 @@
       {
         "start": "Saturday, February 10, 2024 5:20:00 PM GMT-5:00",
         "end": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
-        "heading": "Mi trayectoria hacia la investigación clínica",
-        "description": "Desde sus primeros días de formación hasta su actual búsqueda de un doctorado, Jazmín Guayco compartirá sus experiencias, desafíos superados y lecciones aprendidas en el campo de la investigación médica.",
-        "speaker": {
-          "name": "Jazmín Guayco Sigcha",
-          "title": "Candidata a PhD en el Centro de Investigación Torácica de la Universidad the Queensland (UQTRC)",
-          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Jazmin-Guayco.webp"
-        }
-      },
-      {
-        "start": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
-        "end": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
         "heading": "Experiencias personales en la carrera de biotecnología vegetal",
         "description": "En esta charla, Cristina compartirá las vivencias que la llevaron a sumergirse en campo de la biotecnología vegetal. Descubrirás los desafíos superados, los logros alcanzados y las lecciones valiosas aprendidas a lo largo de su trayectoria",
         "speaker": {
@@ -172,8 +173,29 @@
         }
       },
       {
+        "start": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
+        "heading": "Mazzarello Gaming",
+        "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
+        "speaker": {
+          "name": "Mazzarello Gaming",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mazzarello-Gaming.webp"
+        }
+      },
+      {
         "start": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
-        "end": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:20:00 PM GMT-5:00",
+        "heading": "El Arte y STEAM",
+        "description": "Descubriremos la sinergia única entre su proceso creativo y la ciencia y tecnología, revelando cómo la innovación y el conocimiento técnico se entrelazan armoniosamente para enriquecer y elevar el arte.",
+        "speaker": {
+          "name": "Ruth Cruz Mendoza",
+          "title": "Artista Plástica",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Ruth-Cruz-Mendoza.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 6:20:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
         "heading": "Sorteo",
         "description": "1x curso de Udemy."
       }
