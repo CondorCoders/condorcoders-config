@@ -87,6 +87,13 @@
           "name": "Centro de Estudios de Cine y Televisión",
           "href": "https://www.instagram.com/cectvcine/"
         }
+      ],
+      "juniors": [
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Becas-en-Rusia.webp",
+          "name": "Becas en Rusia",
+          "href": "https://www.instagram.com/becasenrusia"
+        }
       ]
     }
   },
