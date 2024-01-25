@@ -174,7 +174,13 @@
       },
       {
         "start": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
-        "end": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:50:00 PM GMT-5:00",
+        "heading": "Sorteo",
+        "description": "1x curso de Udemy."
+      },
+      {
+        "start": "Saturday, February 10, 2024 5:50:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
         "heading": "Mazzarello Gaming",
         "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
         "speaker": {
@@ -183,8 +189,8 @@
         }
       },
       {
-        "start": "Saturday, February 10, 2024 6:00:00 PM GMT-5:00",
-        "end": "Saturday, February 10, 2024 6:20:00 PM GMT-5:00",
+        "start": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
         "heading": "El Arte y STEAM",
         "description": "Descubriremos la sinergia única entre su proceso creativo y la ciencia y tecnología, revelando cómo la innovación y el conocimiento técnico se entrelazan armoniosamente para enriquecer y elevar el arte.",
         "speaker": {
@@ -194,10 +200,10 @@
         }
       },
       {
-        "start": "Saturday, February 10, 2024 6:20:00 PM GMT-5:00",
-        "end": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
+        "start": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:40:00 PM GMT-5:00",
         "heading": "Sorteo",
-        "description": "1x curso de Udemy."
+        "description": "1x beca para Curso de Cine online."
       }
     ]
   }
