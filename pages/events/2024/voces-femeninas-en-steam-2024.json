@@ -104,6 +104,11 @@
           "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Becas-en-Rusia.webp",
           "name": "Becas en Rusia",
           "href": "https://www.instagram.com/becasenrusia"
+        },
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Universidad_Bolivariana.webp",
+          "name": "Universidad Bolivariana del Ecuador",
+          "href": "https://ube.edu.ec/"
         }
       ]
     }
