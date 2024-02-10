@@ -109,6 +109,11 @@
           "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Universidad_Bolivariana.webp",
           "name": "Universidad Bolivariana del Ecuador",
           "href": "https://ube.edu.ec/"
+        },
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/Startupgrind.webp",
+          "name": "Startup Grind Guayaquil",
+          "href": "https://www.startupgrind.com/guayaquil/"
         }
       ]
     }
