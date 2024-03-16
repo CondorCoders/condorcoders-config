@@ -1,0 +1,140 @@
+{
+  "banner": {
+    "image": "Mascot-Female",
+    "title": "Conversatorio: Mujeres en STEM 2024",
+    "time": 1711832400,
+    "description": "Aprender y conoce las historias inspiradoras de mujeres en STEM en el marco del Día Internacional de la Mujer (8M).",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Voces%20Femeninas%20en%20STEAM%20(D%C3%ADa%20Internacional%20de%20la%20Ni%C3%B1a%20y%20Mujer%20en%20la%20Ciencia)&dates=20240210T210000Z/20240210T230000Z&details=EVENTO%20ONLINE%20en%20https%3A%2F%2Fwww.youtube.com%2F%40condorcoders%0A%0AParticipa%20en%20una%20inspiradora%20jornada%20en%20conmemoraci%C3%B3n%20del%20D%C3%ADa%20de%20la%20Mujer%20y%20la%20Ni%C3%B1a%20en%20Ciencia%20(11F).%20Descubre%20historias%20fascinantes%20y%20aprende%20de%20destacadas%20mujeres%20en%20la%20ciencia%2C%20participa%20en%20sorteos%20y%20ten%20la%20oportunidad%20de%20ganar%20incre%C3%ADbles%20premios.%0A&location=https%3A%2F%2Fwww.youtube.com%2F%40condorcoders&sf=true&output=xml",
+    "eventLink": "https://www.youtube.com/live/6lEdeamp-J8?si=AWgmd7IqimJGMs4G",
+    "signupLink": "https://tally.so/r/wLpoxz"
+  },
+  "speakers": {
+    "title": "Invitadas",
+    "description": "Conoce a nuestras destacadas invitadas que liderarán la conversación en nuestro evento del Día de la Mujer y la Niña en Ciencia (11F).",
+    "profiles": [
+      {
+        "name": "Sofía Juarez Moran",
+        "title": "Parte de la Primera Tripulación de niñas Ecuatorianas que fueron a la Nasa del proyecto 'Ella es Astronauta'",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sofia-Juarez-Moran.webp",
+        "socials": [
+          {
+            "icon": "instagram",
+            "href": "https://www.instagram.com/yosofiajuarez/"
+          }
+        ]
+      },
+    ]
+  },
+  "sponsors": {
+    "title": "Sponsors",
+    "description": "Agradecemos a nuestros valiosos patrocinadores por su apoyo.",
+    "brands": {
+      "senior": [
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/CECTV.webp",
+          "name": "Centro de Estudios de Cine y Televisión",
+          "href": "https://www.instagram.com/cectvcine/"
+        }
+      ],
+    }
+  },
+  "agenda": {
+    "title": "Agenda",
+    "description": "Conversatorio .",
+    "itinerary": [
+      {
+        "start": "Saturday, February 10, 2024 4:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:10:00 PM GMT-5:00",
+        "heading": "Bienvenida",
+        "description": "Hablamos de la jornada de hoy y cómo participar en los sorteos.",
+        "speaker": {
+          "name": "Sofía Grijalva",
+          "title": "Programadora Frontend y Creadora de Contenido ",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Condor-Coders-Foto-Perfil.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 4:10:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:30:00 PM GMT-5:00",
+        "heading": "Mi experiencia en la NASA",
+        "description": "Conoce la experiencia de ir a la NASA como parte de la Primera Tripulación de niñas ecuatorianas que tuvieron la oportunidad de visitar la NASA, gracias al proyecto 'Ella es Astronauta' de la Fundación 'She Is'.",
+        "speaker": {
+          "name": "Sofía Juarez Moran",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sofia-Juarez-Moran.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 4:30:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 4:50:00 PM GMT-5:00",
+        "heading": "Mi trayectoria hacia la investigación clínica",
+        "description": "Desde sus primeros días de formación hasta su actual búsqueda de un doctorado, Jazmín Guayco compartirá sus experiencias, desafíos superados y lecciones aprendidas en el campo de la investigación médica.",
+        "speaker": {
+          "name": "Jazmín Guayco Sigcha",
+          "title": "Candidata a PhD en el Centro de Investigación Torácica de la Universidad the Queensland (UQTRC)",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Jazmin-Guayco.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 4:50:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:00:00 PM GMT-5:00",
+        "heading": "Sorteo",
+        "description": "1x curso de Udemy."
+      },
+      {
+        "start": "Saturday, February 10, 2024 5:00:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:20:00 PM GMT-5:00",
+        "heading": "Mi experiencia estudiando Física",
+        "description": "Sara compartirá cómo logró compaginar su dedicación al estudio de la Física con la emocionante labor de crear y divulgar contenido científico en las redes sociales.",
+        "speaker": {
+          "name": "Sara Gallegos",
+          "title": "Licenciada en Física y Divulgadora de contenido de científico como Morra Científica",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Sara-Gallegos.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 5:20:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
+        "heading": "Experiencias personales en la carrera de biotecnología vegetal",
+        "description": "En esta charla, Cristina compartirá las vivencias que la llevaron a sumergirse en campo de la biotecnología vegetal. Descubrirás los desafíos superados, los logros alcanzados y las lecciones valiosas aprendidas a lo largo de su trayectoria",
+        "speaker": {
+          "name": "Cristina Ocaña Gallegos",
+          "title": "Licenciada en Biotecnología Vegetal y Cultivos.",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Cristina-Oca%C3%B1a-Gallegos.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 5:40:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 5:50:00 PM GMT-5:00",
+        "heading": "Sorteo",
+        "description": "1x curso de Udemy."
+      },
+      {
+        "start": "Saturday, February 10, 2024 5:50:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
+        "heading": "Mazzarello Gaming",
+        "description": "Estudiantes de la Unidad Educativa Fiscomisional Salesiana Santa María Mazzarello desarrollaron el proyecto denominado 'Mazzarello Gaming' con la finalidad de aportar a la sociedad con esta idea innovadora a través de los video juegos.",
+        "speaker": {
+          "name": "Melina Lindao y Valentina Herrera",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mazzarello-Gaming.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 6:10:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
+        "heading": "Arte, Ciencia y Tecnología en Sintonía",
+        "description": "Descubriremos la sinergia única entre su proceso creativo y la ciencia y tecnología, revelando cómo la innovación y el conocimiento técnico se entrelazan armoniosamente para enriquecer y elevar el arte.",
+        "speaker": {
+          "name": "Ruth Cruz Mendoza",
+          "title": "Artista Plástica, Master en Artes Visuales y Nuevos Medios",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Ruth-Cruz-Mendoza.webp"
+        }
+      },
+      {
+        "start": "Saturday, February 10, 2024 6:30:00 PM GMT-5:00",
+        "end": "Saturday, February 10, 2024 6:40:00 PM GMT-5:00",
+        "heading": "Sorteo",
+        "description": "1x beca para Curso de Cine online."
+      }
+    ]
+  }
+}
