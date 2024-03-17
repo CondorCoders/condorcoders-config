@@ -1,19 +1,20 @@
-[{
-      "url": "/eventos/2024/conversatorio-mujeres-en-stem-2024",
-      "thumbnail": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/thumbnails/conversatorio-mujeres-en-stem-2024.webp",
-      "title": "Conversatorio: Mujeres en STEM",
-      "time": 1711832400,
-      "description": "Aprende y conoce las historias inspiradoras de mujeres en STEM en el marco del Día Internacional de la Mujer (8M).",
-      "modalidad": "online",
-      "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Conversatorio%3A%20Mujeres%20en%20STEM&dates=20240316T230817Z/20240316T230817Z&details=S%C3%BAmate%20a%20este%20evento%20para%20aprender%20y%20conocer%20las%20historias%20inspiradoras%20de%20mujeres%20en%20STEM%20en%20el%20marco%20del%20D%C3%ADa%20Internacional%20de%20la%20Mujer%20(8M).&location=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DCsy_tBq1Jqc%26ab_channel%3DCondorCoders&sf=true&output=xml"
-    },
-    {
-      "url": "/eventos/2024/voces-femeninas-en-steam-2024",
-      "thumbnail": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/thumbnails/voces-femeninas-en-steam-2024.webp",
-      "title": "Voces Femeninas en STEAM 2024",
-      "time": 1707580800000,
-      "description": "Celebra el Día de la Mujer y la Niña en Ciencia (11F) sumándote a este evento para explorar y aprender de destacadas mujeres en STEAM.",
-      "modalidad": "online",
-      "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Voces%20Femeninas%20en%20STEAM%20(D%C3%ADa%20Internacional%20de%20la%20Ni%C3%B1a%20y%20Mujer%20en%20la%20Ciencia)&dates=20240210T210000Z/20240210T230000Z&details=EVENTO%20ONLINE%20en%20https%3A%2F%2Fwww.youtube.com%2F%40condorcoders%0A%0AParticipa%20en%20una%20inspiradora%20jornada%20en%20conmemoraci%C3%B3n%20del%20D%C3%ADa%20de%20la%20Mujer%20y%20la%20Ni%C3%B1a%20en%20Ciencia%20(11F).%20Descubre%20historias%20fascinantes%20y%20aprende%20de%20destacadas%20mujeres%20en%20la%20ciencia%2C%20participa%20en%20sorteos%20y%20ten%20la%20oportunidad%20de%20ganar%20incre%C3%ADbles%20premios.%0A&location=https%3A%2F%2Fwww.youtube.com%2F%40condorcoders&sf=true&output=xml"
-    }
-  ]
+[
+  {
+    "url": "/eventos/2024/conversatorio-mujeres-en-stem-2024",
+    "thumbnail": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/thumbnails/conversatorio-mujeres-en-stem-2024.webp",
+    "title": "Conversatorio: Mujeres en STEM",
+    "time": 1711832400,
+    "description": "Aprende y conoce las historias inspiradoras de mujeres en STEM en el marco del Día Internacional de la Mujer (8M).",
+    "modalidad": "online",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Conversatorio%3A%20Mujeres%20en%20STEM&dates=20240316T230817Z/20240316T230817Z&details=S%C3%BAmate%20a%20este%20evento%20para%20aprender%20y%20conocer%20las%20historias%20inspiradoras%20de%20mujeres%20en%20STEM%20en%20el%20marco%20del%20D%C3%ADa%20Internacional%20de%20la%20Mujer%20(8M).&location=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DCsy_tBq1Jqc%26ab_channel%3DCondorCoders&sf=true&output=xml"
+  },
+  {
+    "url": "/eventos/2024/voces-femeninas-en-steam-2024",
+    "thumbnail": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/thumbnails/voces-femeninas-en-steam-2024.webp",
+    "title": "Voces Femeninas en STEAM 2024",
+    "time": 1707580800000,
+    "description": "Celebra el Día de la Mujer y la Niña en Ciencia (11F) sumándote a este evento para explorar y aprender de destacadas mujeres en STEAM.",
+    "modalidad": "online",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Voces%20Femeninas%20en%20STEAM%20(D%C3%ADa%20Internacional%20de%20la%20Ni%C3%B1a%20y%20Mujer%20en%20la%20Ciencia)&dates=20240210T210000Z/20240210T230000Z&details=EVENTO%20ONLINE%20en%20https%3A%2F%2Fwww.youtube.com%2F%40condorcoders%0A%0AParticipa%20en%20una%20inspiradora%20jornada%20en%20conmemoraci%C3%B3n%20del%20D%C3%ADa%20de%20la%20Mujer%20y%20la%20Ni%C3%B1a%20en%20Ciencia%20(11F).%20Descubre%20historias%20fascinantes%20y%20aprende%20de%20destacadas%20mujeres%20en%20la%20ciencia%2C%20participa%20en%20sorteos%20y%20ten%20la%20oportunidad%20de%20ganar%20incre%C3%ADbles%20premios.%0A&location=https%3A%2F%2Fwww.youtube.com%2F%40condorcoders&sf=true&output=xml"
+  }
+]
