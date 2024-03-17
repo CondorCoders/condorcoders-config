@@ -22,7 +22,7 @@
             "href": "https://www.instagram.com/claus.lab/"
           }
         ]
-      },
+      }
     ]
   },
   "sponsors": {
@@ -35,7 +35,7 @@
           "name": "Centro de Estudios de Cine y Televisión",
           "href": "https://www.instagram.com/cectvcine/"
         }
-      ],
+      ]
     }
   },
   "agenda": {
@@ -62,7 +62,7 @@
           "name": "Claudia Segovia",
           "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Claudia-Segovia.webp"
         }
-      },
+      }
     ]
   }
 }
