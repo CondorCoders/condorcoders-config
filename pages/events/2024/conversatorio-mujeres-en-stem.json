@@ -13,6 +13,17 @@
     "description": "Conoce a nuestras destacadas invitadas.",
     "profiles": [
       {
+        "name": "Blanca López",
+        "title": "Vicealcaldesa de Guayaquil",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Blanca-Lopez.webp",
+        "socials": [
+          {
+            "icon": "instagram",
+            "href": "https://www.instagram.com/blancalopezc_/"
+          }
+        ]
+      },
+      {
         "name": "Claudia Segovia",
         "title": "PhD en Biología y fundadora de la Red Ecuatoriana de Mujeres Científicas (REMCI)",
         "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Claudia-Segovia.webp",
@@ -20,6 +31,17 @@
           {
             "icon": "instagram",
             "href": "https://www.instagram.com/claus.lab/"
+          }
+        ]
+      },
+      {
+        "name": "Mavelin Ati Herdoiza",
+        "title": "Ingeniera en Sistemas Informáticos en ThoughtWorks y miembro de la comunidad de AWS Ecuador",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mavelin-Ati-Herdoiza.webp",
+        "socials": [
+          {
+            "icon": "linkedin",
+            "href": "https://www.linkedin.com/in/mavelin-ati-09b53431/"
           }
         ]
       }
@@ -34,6 +56,13 @@
           "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/CECTV.webp",
           "name": "Centro de Estudios de Cine y Televisión",
           "href": "https://www.instagram.com/cectvcine/"
+        }
+      ],
+      "junior":[
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/ABL.webp",
+          "name": "ABL",
+          "href": "https://www.instagram.com/ablguayaquil/"
         }
       ]
     }
@@ -57,11 +86,7 @@
         "start": "Saturday, March 30, 2024 4:10:00 PM GMT-5:00",
         "end": "Saturday, March 30, 2024 5:00:00 PM GMT-5:00",
         "heading": "Conversatorio",
-        "description": "Diálogo sobre nuestras experiencias en campos STEM y contestamos preguntas de la audiencia.",
-        "speaker": {
-          "name": "Claudia Segovia",
-          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Claudia-Segovia.webp"
-        }
+        "description": "Diálogo sobre nuestras experiencias en campos STEM y contestamos preguntas de la audiencia."
       }
     ]
   }
