@@ -31,6 +31,10 @@
           {
             "icon": "instagram",
             "href": "https://www.instagram.com/claus.lab/"
+          },
+          {
+            "icon": "website",
+            "href": "https://www.remci.org/"
           }
         ]
       },
