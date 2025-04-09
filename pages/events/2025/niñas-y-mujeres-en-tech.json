@@ -1,0 +1,97 @@
+{
+  "banner": {
+    "image": "Mascot-Female",
+    "title": "Conversatorio: Mujeres en STEM Y Liderazgo 2024",
+    "time": 1745654400000,
+    "description": "Sumate a nuestras charlas para aprender de tecnología desde diferentes perspectivas y disciplinas.",
+    "calendarLink": "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250426T210000Z%2F20250427T000000Z&details=%F0%9F%8E%89%20Evento%3A%20Ni%C3%B1as%20y%20Mujeres%20en%20Tech%202025%0A%F0%9F%93%85%20Fecha%3A%20S%C3%A1bado%2026%20de%20abril%0A%F0%9F%95%93%20Hora%3A%204%3A00%20p.m.%20%E2%80%93%207%3A00%20p.m.%20%28hora%20de%20Ecuador%2FColombia%29%0A%F0%9F%8C%90%20Modalidad%3A%20Virtual%20%E2%80%93%20Transmisi%C3%B3n%20en%20vivo%20por%20Twitch%20y%20YouTube%0A%F0%9F%94%97%20%20Youtube%3A%20https%3A%2F%2Fyoutube.com%2Flive%2Fw7mZeutcS24%0A%F0%9F%94%97%20%20Twitch%3A%20https%3A%2F%2Fwww.twitch.tv%2Fcondorcoders%0A%F0%9F%93%8D%20Organiza%3A%20%40CondorCoders%0A%0A%C3%9Anete%20a%20un%20evento%20lleno%20de%20charlas%20t%C3%A9cnicas%20e%20inspiradoras%20impartidas%20por%20mujeres%20que%20est%C3%A1n%20transformando%20el%20mundo%20de%20la%20tecnolog%C3%ADa.%20Hablaremos%20sobre%20videojuegos%2C%20rob%C3%B3tica%2C%20desarrollo%20profesional%2C%20UX%2C%20inteligencia%20artificial%20y%20DevOps.%0A%C2%A1Abierto%20para%20todos%21%20%F0%9F%92%BB%E2%9C%A8%0A%0AIncluye%20sorteos%2C%20espacios%20para%20preguntas%20y%20mucha%20inspiraci%C3%B3n.%0ANo%20te%20lo%20pierdas.&location=https%3A%2F%2Fyoutube.com%2Flive%2Fw7mZeutcS24&text=Ni%C3%B1as%20y%20Mujeres%20en%20Tech%202025",
+    "eventLink": "https://youtube.com/live/w7mZeutcS24",
+    "signupLink": "https://condorcoders.kit.com/ninasymujeresentech2025"
+  },
+  "speakers": {
+    "title": "Invitadas",
+    "description": "Conoce a nuestras destacadas invitadas.",
+    "profiles": [
+      {
+        "name": "Blanca López",
+        "title": "Vicealcaldesa de Guayaquil",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Blanca-Lopez.webp",
+        "socials": [
+          {
+            "icon": "instagram",
+            "href": "https://www.instagram.com/blancalopezc_/"
+          }
+        ]
+      },
+      {
+        "name": "Claudia Segovia",
+        "title": "PhD en Biología y fundadora de la Red Ecuatoriana de Mujeres Científicas (REMCI)",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Claudia-Segovia.webp",
+        "socials": [
+          {
+            "icon": "instagram",
+            "href": "https://www.instagram.com/claus.lab/"
+          },
+          {
+            "icon": "website",
+            "href": "https://www.remci.org/"
+          }
+        ]
+      },
+      {
+        "name": "Mavelin Ati Herdoiza",
+        "title": "Ingeniera en Sistemas Informáticos en ThoughtWorks y miembro de la comunidad de AWS Ecuador",
+        "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Mavelin-Ati-Herdoiza.webp",
+        "socials": [
+          {
+            "icon": "linkedin",
+            "href": "https://www.linkedin.com/in/mavelin-ati-09b53431/"
+          }
+        ]
+      }
+    ]
+  },
+  "sponsors": {
+    "title": "Sponsors",
+    "description": "Agradecemos a nuestros valiosos patrocinadores por su apoyo.",
+    "brands": {
+      "senior": [
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/CECTV.webp",
+          "name": "Centro de Estudios de Cine y Televisión",
+          "href": "https://www.instagram.com/cectvcine/"
+        }
+      ],
+      "juniors":[
+        {
+          "logo": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/sponsors/ABL.webp",
+          "name": "ABL",
+          "href": "https://www.instagram.com/ablguayaquil/"
+        }
+      ]
+    }
+  },
+  "agenda": {
+    "title": "Agenda",
+    "description": "Conversatorio entre mujeres en STEM, únete y se parte de este diálogo.",
+    "itinerary": [
+      {
+        "start": "Saturday, March 30, 2024 4:00:00 PM GMT-5:00",
+        "end": "Saturday, March 30, 2024 4:10:00 PM GMT-5:00",
+        "heading": "Bienvenida",
+        "description": "Hablamos de la jornada de hoy y damos la bienvenida a las invitadas.",
+        "speaker": {
+          "name": "Sofía Grijalva",
+          "title": "Programadora Frontend y Creadora de Contenido ",
+          "image": "https://raw.githubusercontent.com/CondorCoders/condorcoders-config/main/pages/images/speakers/Condor-Coders-Foto-Perfil.webp"
+        }
+      },
+      {
+        "start": "Saturday, March 30, 2024 4:10:00 PM GMT-5:00",
+        "end": "Saturday, March 30, 2024 5:00:00 PM GMT-5:00",
+        "heading": "Conversatorio",
+        "description": "Diálogo sobre nuestras experiencias en campos STEM y contestamos preguntas de la audiencia."
+      }
+    ]
+  }
+}
