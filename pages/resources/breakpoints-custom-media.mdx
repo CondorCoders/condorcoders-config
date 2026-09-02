@@ -70,7 +70,7 @@ Esto no solo hace el código más legible. También centraliza la definición de
 
 La idea es bastante simple: el nombre del breakpoint comunica el contexto, no solo un número. `--tablet`, `--desktop`, `--mobile-lg` tienen mucho más sentido que `768px` o `1024px` dispersos por el archivo.
 
-> En otras palabras, `@custom-media` es la herramienta, y el patrón real es “breakpoints con nombre y reutilizables”.
+Eso sí: `@custom-media` es una sintaxis experimental. Aunque forma parte de la especificación de Media Queries Level 5, todavía no está soportada de forma nativa en todos los navegadores, así que vale la pena revisar su estado real en [Can I Use](https://caniuse.com/?search=custom-media). La referencia oficial está en la documentación de MDN para [@custom-media](https://developer.mozilla.org/en-US/docs/Web/CSS/@custom-media) y en la especificación de [Media Queries Level 5](https://drafts.csswg.org/mediaqueries-5/#custom-mq). Cuando se necesita usarlo en producción, la solución usual es procesarlo con [PostCSS](https://postcss.org/) y el plugin [postcss-custom-media](https://github.com/postcss/postcss-custom-media).
 
 ---
 
@@ -125,7 +125,7 @@ module.exports = {
 };
 ```
 
-El orden importa: `postcss-import` debe ejecutarse antes para inyectar `tokens.css` antes de resolver los aliases. Luego, el build convierte tus `@custom-media` en `@media` normales que cualquier navegador puede entender.
+El orden importa: `postcss-import` debe ejecutarse antes para inyectar `tokens.css` y resolver los `@import`; luego `postcss-custom-media` transforma los aliases `@custom-media` en `@media` normales. Es decir, `postcss-import` ayuda a organizar el CSS, pero el plugin que realmente interpreta `@custom-media` es `postcss-custom-media`.
 
 ---
 
@@ -171,9 +171,11 @@ La mejora aquí es muy clara: el código fuente sigue siendo limpio y legible, y
 
 ---
 
-## De Tailwind a tokens con nombres descriptivos
+## Configuración de breakpoints
 
-Si ya estás usando valores de Tailwind o alguna escala similar, es una buena idea convertirlos en nombres con intención.
+En un proyecto real, lo más útil es definir una base de breakpoints desde el inicio y mantenerla en un solo archivo. Así, todo el diseño comparte la misma escala y los nombres se vuelven más significativos que los números puros.
+
+Para esta base, usé como referencia los breakpoints de Tailwind, que están documentados en [Responsive design](https://tailwindcss.com/docs/responsive-design). Estos son breakpoints “desde” (`width >= ...`), pensados para un flujo mobile first: primero construimos el layout base para móvil y luego añadimos ajustes a partir de cada punto de quiebre.
 
 | Tailwind | Valor          | Nombre         |
 | -------- | -------------- | -------------- |
@@ -184,12 +186,15 @@ Si ya estás usando valores de Tailwind o alguna escala similar, es una buena id
 | 2xl      | 96rem (1536px) | `--desktop-xl` |
 
 ```css
-@custom-media --mobile-lg (width >= 40rem);
-@custom-media --tablet (width >= 48rem);
-@custom-media --desktop (width >= 64rem);
-@custom-media --desktop-lg (width >= 80rem);
-@custom-media --desktop-xl (width >= 96rem);
+/* tokens.css */
+@custom-media --mobile-lg (width >= 40rem); /* 640px */
+@custom-media --tablet (width >= 48rem); /* 768px */
+@custom-media --desktop (width >= 64rem); /* 1024px */
+@custom-media --desktop-lg (width >= 80rem); /* 1280px */
+@custom-media --desktop-xl (width >= 96rem); /* 1536px */
 ```
+
+Si escribimos estos tokens en un archivo central, el resto del proyecto solo necesita importarlos y usar los nombres. Eso hace que el CSS sea más legible y mucho más fácil de mantener.
 
 Usar `rem` en lugar de `px` también tiene sentido porque se mantiene más consistente con la escala tipográfica del usuario y con el comportamiento del tamaño base del documento.
 
@@ -214,7 +219,7 @@ Estas definiciones hacen que el CSS del proyecto se lea como un idioma propio: �
 
 ## Uso real en una interfaz
 
-Imagina una navegación y una grilla de tarjetas:
+Imagina una navegación y un grid de tarjetas:
 
 ```css
 @import "./tokens.css";
@@ -255,19 +260,3 @@ Imagina una navegación y una grilla de tarjetas:
 ```
 
 La diferencia no es solo estética: este enfoque hace que el código comunique el diseño de una manera mucho más clara para ti y para cualquier persona que vuelva a revisarlo después.
-
----
-
-## Soporte y compatibilidad
-
-`@custom-media` es una especificación de Media Queries Level 5 y, aunque es muy útil, aún no está implementada de forma nativa en todos los navegadores. Firefox Nightly lo soporta detrás de una flag, y Chrome o Safari todavía no lo usan directamente en producción.
-
-Por eso, el flujo recomendado es usar PostCSS con `postcss-custom-media` en el build. El código fuente sigue siendo HTML y CSS puro, pero el procesador se encarga de convertir esa sintaxis a una versión estándar que sí funciona hoy en la mayoría de navegadores.
-
----
-
-## Resumen
-
-La idea central es simple: en vez de repetir números, definimos breakpoints con nombre y los reutilizamos. `@custom-media` nos da ese nivel de abstracción sin perder claridad ni mantener un CSS oscuro. Cuando se escribe bien, los media queries dejan de verse como una serie de “trucos” y empiezan a leerse como parte natural de la estructura del diseño.
-
-Eso convierte el responsive design en algo más mantenible, más legible y más fácil de escalar a medida que la interfaz crece.
