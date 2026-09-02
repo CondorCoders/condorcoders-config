@@ -110,22 +110,51 @@ mi-proyecto/
 └── postcss.config.js
 ```
 
-Primero instalamos las dependencias necesarias:
+### 1. Inicializar el proyecto e instalar dependencias
 
 ```bash
-npm init -y
-npm install -D postcss postcss-cli postcss-import postcss-custom-media
+pnpm init
+pnpm add -D postcss postcss-cli postcss-import postcss-custom-media
 ```
 
-Y luego configuramos PostCSS:
+- `postcss` es el motor que procesa el CSS.
+- `postcss-cli` permite correr PostCSS desde la terminal con un comando simple.
+- `postcss-import` resuelve los `@import`, así `styles.css` puede traer `tokens.css` antes de procesar los breakpoints.
+- `postcss-custom-media` transforma los aliases `@custom-media` en `@media` estándar.
+
+### 2. Configurar PostCSS
 
 ```js
+// postcss.config.js
 module.exports = {
   plugins: [require("postcss-import"), require("postcss-custom-media")],
 };
 ```
 
-El orden importa: `postcss-import` debe ejecutarse antes para inyectar `tokens.css` y resolver los `@import`; luego `postcss-custom-media` transforma los aliases `@custom-media` en `@media` normales. Es decir, `postcss-import` ayuda a organizar el CSS, pero el plugin que realmente interpreta `@custom-media` es `postcss-custom-media`.
+Punto importante: el orden importa. `postcss-import` debe ir primero para inyectar el contenido de `tokens.css` dentro de `styles.css` antes de que `postcss-custom-media` resuelva los aliases. Si inviertes ese orden, el plugin de custom media no alcanza a ver definiciones que todavía no fueron importadas.
+
+### 3. Agregar scripts al `package.json`
+
+```json
+{
+  "scripts": {
+    "build:css": "postcss styles.css -o dist/styles.css",
+    "watch:css": "postcss styles.css -o dist/styles.css --watch"
+  }
+}
+```
+
+Con eso ya puedes generar el archivo final una vez con `pnpm build:css` o dejar el proceso escuchando cambios con `pnpm watch:css` mientras trabajas.
+
+### 4. Actualizar el HTML para usar el CSS compilado
+
+Si tu `index.html` todavía apunta a `styles.css`, hay que cambiarlo para que cargue el archivo generado en `dist`:
+
+```html
+<link rel="stylesheet" href="./dist/styles.css" />
+```
+
+Ese detalle es importante porque el navegador no entiende `@custom-media` igual que PostCSS. El archivo que debe consumir la página es el CSS ya procesado dentro de `dist`.
 
 ---
 
@@ -153,7 +182,7 @@ body {
 }
 ```
 
-Y el CSS generado queda así:
+Y el CSS generado en /dist queda así:
 
 ```css
 body {
