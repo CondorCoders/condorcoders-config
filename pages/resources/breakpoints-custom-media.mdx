@@ -8,121 +8,116 @@ tags:
   - css
 ---
 
-## El problema
+## El problema de los números mágicos
+
+Cuando construimos un layout responsive, es muy común escribir algo así:
 
 ```css
 @media (min-width: 768px) {
   /* navbar */
 }
+
 @media (min-width: 640px) {
   /* cards: 2 columnas */
 }
+
 @media (min-width: 1024px) {
   /* cards: 3 columnas */
 }
+
 @media (min-width: 1280px) {
   /* cards: centrado */
 }
 ```
 
-- El número en px queda **hardcodeado y repetido** en cada bloque
-- Nada en el código dice qué representa ese número (¿"tablet"? ¿"donde se rompe el sidebar"?)
-- Si el breakpoint cambia, hay que buscar y reemplazar en todo el proyecto
-- Fácil que un archivo quede desincronizado
+Al principio parece simple, pero pronto aparece el problema: esos valores aparecen repetidos en varios puntos y no dicen nada sobre su intención. ¿768px significa tablet? ¿o solo un ajuste de navegación? Cuando el diseño cambia, hay que buscar y reemplazar esos números a lo largo del proyecto. Esa es la parte frustrante: el código funciona, pero es difícil de mantener y aún más difícil de leer.
+
+La buena noticia es que hay una manera más clara de nombrar esos puntos de quiebre.
 
 ---
 
-## La solución
+## La solución: nombrar los breakpoints
 
-Definir cada breakpoint **una sola vez**, con un **nombre descriptivo**, y usarlo en cualquier parte del CSS.
+En lugar de repetir `min-width: 768px` una y otra vez, definimos un nombre que explique su propósito. Así, el CSS se vuelve más expresivo y mucho más fácil de mantener.
 
 ```css
 @custom-media --tablet (width >= 48rem);
 
 @media (--tablet) {
-  .elemento { ... }
+  .elemento {
+    /* estilos para tablet */
+  }
 }
 ```
+
+Esto no solo hace el código más legible. También centraliza la definición del breakpoint. Si más adelante cambia el valor, lo actualizas en un solo lugar y todo el resto del proyecto sigue funcionando.
 
 ---
 
 ## Qué es @custom-media
 
-- At-rule nativo de CSS — spec: **Media Queries Level 5**
-- Crea un **alias con nombre** para una media query
-- Se define una vez, se usa donde haga falta
+`@custom-media` es un at-rule de CSS que nos permite crear un alias para una media query. En otras palabras: en vez de repetir la condición entera cada vez, le damos un nombre y lo reutilizamos donde haga falta.
 
 ```css
 @custom-media --nombre-descriptivo (condición);
 
 @media (--nombre-descriptivo) {
-  .elemento { ... }
+  .elemento {
+    /* ... */
+  }
 }
 ```
 
----
+La idea es bastante simple: el nombre del breakpoint comunica el contexto, no solo un número. `--tablet`, `--desktop`, `--mobile-lg` tienen mucho más sentido que `768px` o `1024px` dispersos por el archivo.
 
-## Estado de soporte
-
-- `@custom-media` es **experimental** — solo detrás de flag en Firefox Nightly
-- Chrome y Safari todavía no lo implementan de forma nativa
-- Para producción: build con el plugin **`postcss-custom-media`**, que traduce `@custom-media` → `@media` normal
-- El código fuente sigue siendo HTML y CSS puro — el build es solo el paso que lo hace funcionar hoy en todos los navegadores
+> En otras palabras, `@custom-media` es la herramienta, y el patrón real es “breakpoints con nombre y reutilizables”.
 
 ---
 
-## Sintaxis dentro del paréntesis: antes vs. ahora
+## ¿Y cómo funciona en la práctica?
+
+La sintaxis más moderna para estas condiciones usa rangos, que se leen mucho mejor:
 
 ```css
 /* Clásica */
 @media (min-width: 768px) { ... }
-@media (max-width: 767.98px) { ... }   /* hay que restar algo para no solaparse */
+@media (max-width: 767.98px) { ... }
 
-/* Rango — Media Queries Level 4 */
+/* Rango */
 @media (width >= 48rem) { ... }
-@media (width < 48rem) { ... }         /* "<" ya es exclusivo, sin restar nada */
+@media (width < 48rem) { ... }
 
-/* Rango entre dos valores, en una sola expresión */
+/* Rango entre dos valores */
 @media (48rem <= width < 64rem) { ... }
 ```
 
-- La sintaxis de rango (`>=`, `<`, `<=`) ya es **Baseline widely available** — funciona nativamente hoy, sin ningún build
-- Lo único que necesita el build de PostCSS es el **alias con nombre** (`@custom-media` en sí)
+La sintaxis de rango es muy útil porque expresa la condición de una forma más natural. Ya no hace falta estar “restando” valores para evitar solapamientos. Además, la parte de `@custom-media` es precisamente la que nos permite encapsular esas condiciones con nombres claros.
 
 ---
 
-## Setup — estructura de carpetas
+## Setup mínimo para usarlo en un proyecto real
 
-```
+Lo más sencillo es mantener los aliases separados en un archivo de tokens y luego importarlos en tu CSS principal.
+
+```text
 mi-proyecto/
-├── tokens.css        ← @custom-media definidos acá
-├── styles.css        ← CSS del proyecto, importa tokens.css
+├── tokens.css
+├── styles.css
 ├── dist/
-│   └── styles.css     ← se genera automáticamente (no se edita a mano)
-├── index.html         ← apunta a dist/styles.css
+│   └── styles.css
+├── index.html
 ├── package.json
 └── postcss.config.js
 ```
 
----
-
-## Setup — instalar dependencias
+Primero instalamos las dependencias necesarias:
 
 ```bash
 npm init -y
 npm install -D postcss postcss-cli postcss-import postcss-custom-media
 ```
 
-| Paquete                | Para qué sirve                                           |
-| ---------------------- | -------------------------------------------------------- |
-| `postcss`              | Motor que procesa el CSS                                 |
-| `postcss-cli`          | Correrlo desde la terminal                               |
-| `postcss-import`       | Resuelve los `@import` (tokens.css dentro de styles.css) |
-| `postcss-custom-media` | Traduce `@custom-media` a `@media` normal                |
-
----
-
-## Setup — postcss.config.js
+Y luego configuramos PostCSS:
 
 ```js
 module.exports = {
@@ -130,32 +125,21 @@ module.exports = {
 };
 ```
 
-⚠️ **El orden importa**: `postcss-import` va primero, para inyectar `tokens.css` antes de resolver los alias.
+El orden importa: `postcss-import` debe ejecutarse antes para inyectar `tokens.css` antes de resolver los aliases. Luego, el build convierte tus `@custom-media` en `@media` normales que cualquier navegador puede entender.
 
 ---
 
-## Setup — scripts
+## Ejemplo completo
 
-```json
-{
-  "scripts": {
-    "build:css": "postcss styles.css -o dist/styles.css",
-    "watch:css": "postcss styles.css -o dist/styles.css --watch"
-  }
-}
-```
-
----
-
-## Probar el setup
+En `tokens.css` definimos los breakpoints:
 
 ```css
-/* tokens.css */
 @custom-media --tablet (width >= 48rem);
 ```
 
+En `styles.css` los usamos:
+
 ```css
-/* styles.css */
 @import "./tokens.css";
 
 body {
@@ -169,8 +153,9 @@ body {
 }
 ```
 
+Y el CSS generado queda así:
+
 ```css
-/* dist/styles.css — generado */
 body {
   background: pink;
 }
@@ -182,19 +167,21 @@ body {
 }
 ```
 
-`(--tablet)` desaparece y queda la condición real, lista para cualquier navegador.
+La mejora aquí es muy clara: el código fuente sigue siendo limpio y legible, y el build se encarga de traducir la sintaxis moderna a algo compatible.
 
 ---
 
 ## De Tailwind a tokens con nombres descriptivos
 
-| Tailwind | Valor          | Nombre del token |
-| -------- | -------------- | ---------------- |
-| sm       | 40rem (640px)  | `--mobile-lg`    |
-| md       | 48rem (768px)  | `--tablet`       |
-| lg       | 64rem (1024px) | `--desktop`      |
-| xl       | 80rem (1280px) | `--desktop-lg`   |
-| 2xl      | 96rem (1536px) | `--desktop-xl`   |
+Si ya estás usando valores de Tailwind o alguna escala similar, es una buena idea convertirlos en nombres con intención.
+
+| Tailwind | Valor          | Nombre         |
+| -------- | -------------- | -------------- |
+| sm       | 40rem (640px)  | `--mobile-lg`  |
+| md       | 48rem (768px)  | `--tablet`     |
+| lg       | 64rem (1024px) | `--desktop`    |
+| xl       | 80rem (1280px) | `--desktop-lg` |
+| 2xl      | 96rem (1536px) | `--desktop-xl` |
 
 ```css
 @custom-media --mobile-lg (width >= 40rem);
@@ -204,23 +191,30 @@ body {
 @custom-media --desktop-xl (width >= 96rem);
 ```
 
-- `rem` en vez de `px`: respeta el tamaño de fuente configurado por el usuario
+Usar `rem` en lugar de `px` también tiene sentido porque se mantiene más consistente con la escala tipográfica del usuario y con el comportamiento del tamaño base del documento.
 
 ---
 
-## Variantes "hasta"
+## Variantes útiles para distintos casos
+
+Además de los breakpoints “desde”, puedes definir versiones “hasta” o combinadas con orientación:
 
 ```css
 @custom-media --until-mobile-lg (width < 40rem);
 @custom-media --until-tablet (width < 48rem);
 @custom-media --until-desktop (width < 64rem);
-@custom-media --until-desktop-lg (width < 80rem);
-@custom-media --until-desktop-xl (width < 96rem);
+
+@custom-media --only-tablet (48rem <= width < 64rem);
+@custom-media --tablet-portrait (width >= 48rem) and (orientation: portrait);
 ```
+
+Estas definiciones hacen que el CSS del proyecto se lea como un idioma propio: “si la pantalla es tablet”, “si está por debajo de desktop”, “si la vista es portrait”. Eso ayuda mucho en equipos grandes y en layouts que cambian con frecuencia.
 
 ---
 
-## Uso en el proyecto
+## Uso real en una interfaz
+
+Imagina una navegación y una grilla de tarjetas:
 
 ```css
 @import "./tokens.css";
@@ -260,31 +254,20 @@ body {
 }
 ```
 
+La diferencia no es solo estética: este enfoque hace que el código comunique el diseño de una manera mucho más clara para ti y para cualquier persona que vuelva a revisarlo después.
+
 ---
 
-## Bonus — rango entre dos valores
+## Soporte y compatibilidad
 
-```css
-@custom-media --only-tablet (48rem <= width < 64rem);
-```
+`@custom-media` es una especificación de Media Queries Level 5 y, aunque es muy útil, aún no está implementada de forma nativa en todos los navegadores. Firefox Nightly lo soporta detrás de una flag, y Chrome o Safari todavía no lo usan directamente en producción.
 
-## Bonus — combinar condiciones
-
-```css
-@custom-media --tablet-portrait (width >= 48rem) and (orientation: portrait);
-```
-
-## Bonus — debug on/off
-
-```css
-@custom-media --debug-mode false; /* cambiar a true para probar */
-```
+Por eso, el flujo recomendado es usar PostCSS con `postcss-custom-media` en el build. El código fuente sigue siendo HTML y CSS puro, pero el procesador se encarga de convertir esa sintaxis a una versión estándar que sí funciona hoy en la mayoría de navegadores.
 
 ---
 
 ## Resumen
 
-- Tokens con **nombre descriptivo**, no códigos abstractos
-- Sintaxis de rango (`>=`, `<`) que se lee de corrido
-- Un build de PostCSS corriendo en segundo plano
-- El código sigue siendo **HTML y CSS puro**
+La idea central es simple: en vez de repetir números, definimos breakpoints con nombre y los reutilizamos. `@custom-media` nos da ese nivel de abstracción sin perder claridad ni mantener un CSS oscuro. Cuando se escribe bien, los media queries dejan de verse como una serie de “trucos” y empiezan a leerse como parte natural de la estructura del diseño.
+
+Eso convierte el responsive design en algo más mantenible, más legible y más fácil de escalar a medida que la interfaz crece.
