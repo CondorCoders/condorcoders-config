@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "breakpoints-custom-media",
+    "title": "Breakpoints reutilizables con @custom-media",
+    "description": "Guía práctica para crear breakpoints reutilizables con @custom-media.",
+    "mdxPath": "pages/recursos/breakpoints-custom-media.mdx",
+    "author": "Sofía Grijalva",
+    "date": "2026-09-01",
+    "tags": ["typescript", "frontend"]
+  }
+]

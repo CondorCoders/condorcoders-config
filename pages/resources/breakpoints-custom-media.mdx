@@ -1,0 +1,290 @@
+---
+title: "Breakpoints reutilizables con @custom-media"
+description: "Guía práctica para crear breakpoints reutilizables con @custom-media en css."
+date: "2026-09-01"
+author: "Sofia Grijalva"
+tags:
+  - frontend
+  - css
+---
+
+## El problema
+
+```css
+@media (min-width: 768px) {
+  /* navbar */
+}
+@media (min-width: 640px) {
+  /* cards: 2 columnas */
+}
+@media (min-width: 1024px) {
+  /* cards: 3 columnas */
+}
+@media (min-width: 1280px) {
+  /* cards: centrado */
+}
+```
+
+- El número en px queda **hardcodeado y repetido** en cada bloque
+- Nada en el código dice qué representa ese número (¿"tablet"? ¿"donde se rompe el sidebar"?)
+- Si el breakpoint cambia, hay que buscar y reemplazar en todo el proyecto
+- Fácil que un archivo quede desincronizado
+
+---
+
+## La solución
+
+Definir cada breakpoint **una sola vez**, con un **nombre descriptivo**, y usarlo en cualquier parte del CSS.
+
+```css
+@custom-media --tablet (width >= 48rem);
+
+@media (--tablet) {
+  .elemento { ... }
+}
+```
+
+---
+
+## Qué es @custom-media
+
+- At-rule nativo de CSS — spec: **Media Queries Level 5**
+- Crea un **alias con nombre** para una media query
+- Se define una vez, se usa donde haga falta
+
+```css
+@custom-media --nombre-descriptivo (condición);
+
+@media (--nombre-descriptivo) {
+  .elemento { ... }
+}
+```
+
+---
+
+## Estado de soporte
+
+- `@custom-media` es **experimental** — solo detrás de flag en Firefox Nightly
+- Chrome y Safari todavía no lo implementan de forma nativa
+- Para producción: build con el plugin **`postcss-custom-media`**, que traduce `@custom-media` → `@media` normal
+- El código fuente sigue siendo HTML y CSS puro — el build es solo el paso que lo hace funcionar hoy en todos los navegadores
+
+---
+
+## Sintaxis dentro del paréntesis: antes vs. ahora
+
+```css
+/* Clásica */
+@media (min-width: 768px) { ... }
+@media (max-width: 767.98px) { ... }   /* hay que restar algo para no solaparse */
+
+/* Rango — Media Queries Level 4 */
+@media (width >= 48rem) { ... }
+@media (width < 48rem) { ... }         /* "<" ya es exclusivo, sin restar nada */
+
+/* Rango entre dos valores, en una sola expresión */
+@media (48rem <= width < 64rem) { ... }
+```
+
+- La sintaxis de rango (`>=`, `<`, `<=`) ya es **Baseline widely available** — funciona nativamente hoy, sin ningún build
+- Lo único que necesita el build de PostCSS es el **alias con nombre** (`@custom-media` en sí)
+
+---
+
+## Setup — estructura de carpetas
+
+```
+mi-proyecto/
+├── tokens.css        ← @custom-media definidos acá
+├── styles.css        ← CSS del proyecto, importa tokens.css
+├── dist/
+│   └── styles.css     ← se genera automáticamente (no se edita a mano)
+├── index.html         ← apunta a dist/styles.css
+├── package.json
+└── postcss.config.js
+```
+
+---
+
+## Setup — instalar dependencias
+
+```bash
+npm init -y
+npm install -D postcss postcss-cli postcss-import postcss-custom-media
+```
+
+| Paquete                | Para qué sirve                                           |
+| ---------------------- | -------------------------------------------------------- |
+| `postcss`              | Motor que procesa el CSS                                 |
+| `postcss-cli`          | Correrlo desde la terminal                               |
+| `postcss-import`       | Resuelve los `@import` (tokens.css dentro de styles.css) |
+| `postcss-custom-media` | Traduce `@custom-media` a `@media` normal                |
+
+---
+
+## Setup — postcss.config.js
+
+```js
+module.exports = {
+  plugins: [require("postcss-import"), require("postcss-custom-media")],
+};
+```
+
+⚠️ **El orden importa**: `postcss-import` va primero, para inyectar `tokens.css` antes de resolver los alias.
+
+---
+
+## Setup — scripts
+
+```json
+{
+  "scripts": {
+    "build:css": "postcss styles.css -o dist/styles.css",
+    "watch:css": "postcss styles.css -o dist/styles.css --watch"
+  }
+}
+```
+
+---
+
+## Probar el setup
+
+```css
+/* tokens.css */
+@custom-media --tablet (width >= 48rem);
+```
+
+```css
+/* styles.css */
+@import "./tokens.css";
+
+body {
+  background: pink;
+}
+
+@media (--tablet) {
+  body {
+    background: lightgreen;
+  }
+}
+```
+
+```css
+/* dist/styles.css — generado */
+body {
+  background: pink;
+}
+
+@media (width >= 48rem) {
+  body {
+    background: lightgreen;
+  }
+}
+```
+
+`(--tablet)` desaparece y queda la condición real, lista para cualquier navegador.
+
+---
+
+## De Tailwind a tokens con nombres descriptivos
+
+| Tailwind | Valor          | Nombre del token |
+| -------- | -------------- | ---------------- |
+| sm       | 40rem (640px)  | `--mobile-lg`    |
+| md       | 48rem (768px)  | `--tablet`       |
+| lg       | 64rem (1024px) | `--desktop`      |
+| xl       | 80rem (1280px) | `--desktop-lg`   |
+| 2xl      | 96rem (1536px) | `--desktop-xl`   |
+
+```css
+@custom-media --mobile-lg (width >= 40rem);
+@custom-media --tablet (width >= 48rem);
+@custom-media --desktop (width >= 64rem);
+@custom-media --desktop-lg (width >= 80rem);
+@custom-media --desktop-xl (width >= 96rem);
+```
+
+- `rem` en vez de `px`: respeta el tamaño de fuente configurado por el usuario
+
+---
+
+## Variantes "hasta"
+
+```css
+@custom-media --until-mobile-lg (width < 40rem);
+@custom-media --until-tablet (width < 48rem);
+@custom-media --until-desktop (width < 64rem);
+@custom-media --until-desktop-lg (width < 80rem);
+@custom-media --until-desktop-xl (width < 96rem);
+```
+
+---
+
+## Uso en el proyecto
+
+```css
+@import "./tokens.css";
+
+.nav-links {
+  display: none;
+}
+
+@media (--tablet) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (--mobile-lg) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (--desktop) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (--desktop-lg) {
+  .cards {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
+```
+
+---
+
+## Bonus — rango entre dos valores
+
+```css
+@custom-media --only-tablet (48rem <= width < 64rem);
+```
+
+## Bonus — combinar condiciones
+
+```css
+@custom-media --tablet-portrait (width >= 48rem) and (orientation: portrait);
+```
+
+## Bonus — debug on/off
+
+```css
+@custom-media --debug-mode false; /* cambiar a true para probar */
+```
+
+---
+
+## Resumen
+
+- Tokens con **nombre descriptivo**, no códigos abstractos
+- Sintaxis de rango (`>=`, `<`) que se lee de corrido
+- Un build de PostCSS corriendo en segundo plano
+- El código sigue siendo **HTML y CSS puro**
